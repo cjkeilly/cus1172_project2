@@ -3,8 +3,7 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="styles.css">
-        <script src="task.js"></script>
+        <link rel="stylesheet" href="main.css">
         <title>Task List</title>
     </head>
 
@@ -12,14 +11,13 @@
 
         <!--header-->
         <h1>Tasks</h1>
-        <button onclick="openForm()">Add</button><br>
 
         <!--form opens when add button clicked-->
         <div class="form-popup" id="add-form">
-            <form>
+            <form method="POST">
 
                 <label for="title">Title:</label><br>
-                <input type="text" id="title" name="title" required><br>
+                <input type="text" id="title" name="title" required><button id="addTaskBtn" onclick="addTask()">+</button><br>
 
                 <input type="radio" id="low" name="priority" value="Low" checked>
                 <label for="low">Low</label><br>
@@ -28,16 +26,15 @@
                 <input type="radio" id="high" name="priority" value="High">
                 <label for="high">High</label><br>
 
-                <input type="submit" value="Add Task">
-
             </form>
         </div>
 
         <!--list of tasks-->
-        <ul>
+        <ul id="tasks-list">
             
         </ul>
 
+        <script src="main.js"></script>
     </body>
     
 </html>

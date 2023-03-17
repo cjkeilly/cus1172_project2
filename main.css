@@ -1,0 +1,81 @@
+html, body {
+    width: 50%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: circle;
+    background: #3399ff;
+    padding: 20px;
+  }
+
+  input[type=text] {
+    padding: 10px;
+    margin:10px 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }
+
+
+label {
+    display:block;
+    margin-bottom:4px;
+    position: relative;
+    padding-left:30px;
+    cursor: pointer;
+  }
+
+  label input[type=radio] {
+    position: absolute;
+
+    opactiy: 0;
+    width:0; 
+    height:0;
+  }
+
+  label span {
+    position: absolute;
+
+    top:0;
+    left:0;
+    width:20px; 
+    height:20px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: .3s background-color;
+  }
+
+  label span:after {
+    content: "";
+    position: absolute;
+    display: none;
+    
+
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color:#fff;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+  }
+  label:hover span {
+    background-color: #ccc;
+  }
+  
+
+  label input:checked ~ span {
+    background-color: #2eaadc;
+  }
+  label input:checked ~ span:after {
+    display:block;
+  }
+
+  h1 {
+    color: #999999;
+    font-family: arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    }
